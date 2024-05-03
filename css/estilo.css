@@ -81,3 +81,42 @@ section{
     background: aqua;
 
 }
+/*RESPONSIVIDADE*/
+@media (max-width:800px){
+    nav ul li{
+        width: 100%;
+        float: none;
+    }
+    nav ul ul {
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+        transition: all 0.4s;
+    }
+    nav ul li:hover ul{
+        height: auto;
+        max-height: 200px;
+    }
+    #bt-menu{
+        display: none;
+    }
+    label[for="bt-menu"]{
+       display: block; 
+    }
+    nav{
+        margin-top: 5px;
+        margin-left: -100%;
+        transition: all 0.5s;
+    }
+    #bt-menu:checked ~ nav{
+        margin-left: 0;
+    }
+
+    .cor{
+        width: 20px;
+        height: 20px;
+        border-radius: 50px;
+        margin-left: 22%;
+        background: transparent;
+    }
+}
